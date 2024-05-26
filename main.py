@@ -4,25 +4,56 @@ from Multiplicar import Multiplicacion
 from Dividir import Division
 from Suma_avanzada import SumaAvanzada
 
-suma1 = Suma.sumar(3,9)
+def menu():
+    print("===Hola Querido Usuario Seleccione Una Opcion===")
+    print("1) Sumar")
+    print("2) Restar")
+    print("3) Multiplicar")
+    print("4) Dividir")
+    print("5) Suma Avanzada")
+    print("6) Salir")
+    print("================================================\n")
 
-print(suma1)
+while True:
+    menu()
+    opc = int(input("Ingrese un numero: "))
 
-resta1 = Resta.restar(13,7)
+    if opc == 1:
+        a = float(input("\nIngresa el primer numero: "))
+        b = float(input("\nIngresa el segundo numero: "))
+        sumaRes = Suma.sumar(a,b)
+        print(f"\n El resultado es: {sumaRes} \n")
+    
+    if opc == 2:
+        a = float(input("\nIngresa el primer numero: "))
+        b = float(input("\nIngresa el segundo numero: "))
+        restaRes = Resta.restar(a,b)
+        print(f"\n El resultado es: {restaRes} \n")
 
-print(resta1)
+    if opc == 3:
+        a = float(input("\nIngresa el primer numero: "))
+        b = float(input("\nIngresa el segundo numero: "))
+        multiRes = Multiplicacion.multiplicar(a,b)
+        print(f"\n El resultado es: {multiRes} \n")
 
-multi1 = Multiplicacion.multiplicar(8,3)
+    if opc == 4:
+        a = float(input("\nIngresa el primer numero: "))
+        b = float(input("\nIngresa el segundo numero: "))
+        divisionRes = Division.dividir(a,b)
+        print(f"\n El resultado es: {divisionRes} \n")
 
-print(multi1)
+    if opc == 5:
+        x = 0
+        b = []
+        n = int(input("\nIngresa la cantidad de numeros a sumar: "))
+        while n > x:
+            a = float(input("Ingresa un numero: "))
+            b.append(a)
+            x+=1
 
-division1 = Division.dividir(36,3)
+        sumaAVRes = SumaAvanzada.sumaAvanzada(b)
+        print(f"\n El resultado es: {sumaAVRes} \n")
 
-print(division1)
-
-sumaA1 = SumaAvanzada.sumaAvanzada(3,1,2,4,1,5)
-
-sumaA2 = SumaAvanzada.sumaAV([3,1,2,4,1,5])
-
-print(sumaA1)
-print(sumaA2)
+    if opc == 6:
+        print("=====Adios=====")
+        break

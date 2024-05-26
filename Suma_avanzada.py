@@ -1,8 +1,5 @@
 class SumaAvanzada:
-    def sumaAvanzada(*args):
-        return sum(args)
-    
-    def sumaAV(n):
+    def sumaAvanzada(n):
         res = 0
         for i in n:
             res += i
