@@ -1,2 +1,1 @@
 # calculadora
-# Calculadora_Opensource
